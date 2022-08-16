@@ -107,6 +107,11 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
         mDrawPaint!!.strokeWidth = mBrushSize
     }
 
+    fun setColour(newColour: String){
+        colour = Color.parseColor(newColour)
+        mDrawPaint!!.color = colour
+    }
+
     internal inner class CustomPath(
         var color: Int, var
         brushThickness: Float
